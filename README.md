@@ -6,14 +6,13 @@ Universal RP version: 14.0.11+
 
 Unity Editor version: 2022.3.55(LTS)+
 
-![Screenshot](Screenshots.jpg)
+![Screenshot](Images~/Screenshots.jpg)
 
 ### Installation: ###
 Add this package via Package Manager:
     
 - Copy this Repository HTTPS URL to clipboard
 - Open via Package Manager Window
-- Go to Top-left and Click on [+] Icon
-- Select: Add package from git URL...
-- Past the link from the clipboard and click [Add] button
+
+![Screenshot](Images~/PackageManager.jpg)
 
