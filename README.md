@@ -6,7 +6,7 @@ Universal RP version: 14.0.11+
 
 Unity Editor version: 2022.3.55(LTS)+
 
-<img src="Screenshots.jpg>
+![Screenshot](Screenshots.jpg)
 
 ### Installation: ###
 Add this package via Package Manager:
