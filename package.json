@@ -1,0 +1,25 @@
+{
+  "name": "cn.unity.physical-light-unit",
+  "description": "Physical Light Units for Universal Render Pipeline (URP).",
+  "version": "14.0.11",
+  "unity": "2022.3",
+  "displayName": "Physical Light Unit",
+  "author": {
+    "name": "michael.lam @ Unity Technologies"
+  },
+  "license": "Unity Companion License",
+  "dependencies": {
+    "com.unity.render-pipelines.universal": "14.0.11"
+  },
+  "keywords": [
+    "graphics",
+    "performance",
+    "rendering",
+    "mobile",
+    "render",
+    "pipeline",
+    "Physical",
+    "Light",
+    "Units"
+  ]
+}
