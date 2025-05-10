@@ -8,7 +8,7 @@ Unity Editor version: 2022.3.55(LTS)+
 
 ![Screenshot](Images~/Screenshots.jpg)
 
-### Note: The Exposure feature is not complete, currently it will just do the simple multiplier of the final Light Intensity output!
+### Note: The Exposure feature is not complete, currently it will just do the simple multiplier of the final Light Intensity output! Only Fixed Mode avaliable at the moment!
 
 ### Installation:
 Add this package via Package Manager:
