@@ -504,6 +504,7 @@ namespace UnityEngine.Rendering.Universal
                 else if (oldLightUnit == LightUnit.Ev100 && newLightUnit == LightUnit.Lux)
                     intensity = LightUtils.ConvertEvToLux(intensity, hdLight.luxAtDistance);
             }
+#if UNITY_EDITOR
             else  // For area lights
             {
                 if (oldLightUnit == LightUnit.Lumen && newLightUnit == LightUnit.Nits)
@@ -519,6 +520,7 @@ namespace UnityEngine.Rendering.Universal
                 if (oldLightUnit == LightUnit.Lumen && newLightUnit == LightUnit.Ev100)
                     intensity = LightUtils.ConvertAreaLightLumenToEv(lightType, intensity, hdLight.legacyLight.areaSize.x, hdLight.legacyLight.areaSize.y);
             }
+#endif // UNITY_EDITOR
 
             hdLight.intensity = intensity;
         }

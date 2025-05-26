@@ -561,6 +561,7 @@ namespace UnityEngine.Rendering.Universal
                     lightData.lightUnit = LightUnit.Lux;
                     lightData.intensity = k_DefaultDirectionalLightIntensity / Mathf.PI * 100000.0f; // Change back to just k_DefaultDirectionalLightIntensity on 11.0.0 (can't change constant as it's a breaking change)
                     break;
+#if UNITY_EDITOR
                 case LightType.Area: // Rectangle by default when light is created
                     switch (lightData.legacyLight.type)
                     {
@@ -576,6 +577,7 @@ namespace UnityEngine.Rendering.Universal
                             break;
                     }
                     break;
+#endif // UNITY_EDITOR
                 case LightType.Point:
                 case LightType.Spot:
                     lightData.lightUnit = LightUnit.Lumen;
@@ -654,8 +656,10 @@ namespace UnityEngine.Rendering.Universal
                 // if (m_PointlightHDType == PointLightHDType.Punctual)
                 if (legacyLight.type != LightType.Area )
                     SetLightIntensityPunctual(intensity);
+#if UNITY_EDITOR
                 else
                     legacyLight.intensity = LightUtils.ConvertAreaLightLumenToLuminance(legacyLight.type, intensity, legacyLight.areaSize.x, legacyLight.areaSize.y);
+#endif // UNITY_EDITOR
             }
             else if (lightUnit == LightUnit.Ev100)
             {
