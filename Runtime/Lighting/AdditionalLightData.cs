@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine.Rendering.HighDefinition;
 using UnityEngine.Serialization;
 
@@ -569,7 +568,9 @@ namespace UnityEngine.Rendering.Universal
                             lightData.intensity = k_DefaultAreaLightIntensity;
                             light.shadowNearPlane = 0;
                             light.shadows = LightShadows.None;
+#if UNITY_EDITOR
                             light.areaSize = new Vector2(0.5f, 0.5f);
+#endif
                             break;
                         case LightType.Disc:
                             //[TODO: to be defined]
@@ -654,8 +655,11 @@ namespace UnityEngine.Rendering.Universal
                 // if (m_PointlightHDType == PointLightHDType.Punctual)
                 if (legacyLight.type != LightType.Area )
                     SetLightIntensityPunctual(intensity);
+#if UNITY_EDITOR
+                // Area Light (Editor Only for URP)
                 else
                     legacyLight.intensity = LightUtils.ConvertAreaLightLumenToLuminance(legacyLight.type, intensity, legacyLight.areaSize.x, legacyLight.areaSize.y);
+#endif
             }
             else if (lightUnit == LightUnit.Ev100)
             {
